@@ -15,8 +15,10 @@
 //   console.log(`Server running at http://${hostname}:${port}/`);
 // });
 
-var express = require ('express'),
-    app = express ();
+const express = require ('express'),
+    app = express (),
+    port = process.env.PORT || 8080,
+    ip = process.env.IP;
 
 // APP CONFIG
 app.set("view engine", "ejs");
@@ -28,6 +30,6 @@ app.get("/", function(req, res){
 });
 
 // LISTEN TO A PORT
-app.listen(3000, function(){
-      console.log("SERVER IS UP! LISTENING AT PORT 3000")  
+app.listen(port, ip, function(){
+      console.log("SERVER IS UP! at PORT" + " " + port)  
 });
