@@ -16,8 +16,9 @@
 // });
 
 const express = require ('express'),
-    app = express (),
-    port = process.env.PORT || 3000,
+    app = express ();
+    
+var port = process.env.PORT || 3000,
     ip = process.env.IP;
 
 // APP CONFIG
