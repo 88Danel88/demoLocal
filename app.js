@@ -17,7 +17,7 @@
 
 const express = require ('express'),
     app = express (),
-    port = process.env.PORT || 8080,
+    port = process.env.PORT || 3000,
     ip = process.env.IP;
 
 // APP CONFIG
@@ -26,7 +26,11 @@ app.use(express.static("public"));
 
 // INDEX ROUTE
 app.get("/", function(req, res){
-  res.render("index");
+  res.render("index.html");
+});
+
+app.get("/docs", function(req, res){
+  res.render("index")
 });
 
 // LISTEN TO A PORT
